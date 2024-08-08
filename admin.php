@@ -2,8 +2,8 @@
 session_start();
 include './db_conn.php';
 if (!isset($_SESSION['LOGGED_IN_EMAIL'])) {
-    header('Location: signin.php');
-    exit();
+  header('Location: signin.php');
+  exit();
 }
 
 $email = $_SESSION['LOGGED_IN_EMAIL'];
@@ -17,8 +17,8 @@ $stmt->close();
 $mysqli->close();
 
 if ($user_type !== 'administrator') {
-    header('Location: index.php');
-    exit();
+  header('Location: index.php');
+  exit();
 }
 
 ?>
@@ -118,99 +118,92 @@ if ($user_type !== 'administrator') {
 
   <!-- Header Area -->
   <header class="header">
-      <!-- Topbar -->
-      <div class="topbar">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-5 col-12">
-              <!-- Contact -->
-              <ul class="top-link">
-                <li><a href="/about.php">About Us</a></li>
-                <li><a href="/courses.php">Courses</a></li>
-                <li><a href="/resources.php">Resources</a></li>
-                <li><a href="/blog-single.php">Blog</a></li>
-                <li><a href="/contact.php">Contact</a></li>
-                <!-- <li><a href="#">Community</a></li> -->
-              </ul>
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-5 col-12">
+            <!-- Contact -->
+            <ul class="top-link">
+              <li><a href="/about.php">About Us</a></li>
+              <li><a href="/courses.php">Courses</a></li>
+              <li><a href="/resources.php">Resources</a></li>
+              <li><a href="/blog-single.php">Blog</a></li>
+              <li><a href="/contact.php">Contact</a></li>
+              <!-- <li><a href="#">Community</a></li> -->
+            </ul>
 
-              <!-- End Contact -->
-            </div>
-            <div class="col-lg-6 col-md-7 col-12">
-              <!-- Top Contact -->
-              <ul class="top-contact">
-                <li><i class="fa fa-phone"></i>+254-759-1048-65</li>
-                <li>
-                  <i class="fa fa-envelope"></i
-                  ><a href="mailto:support@yourmail.com"
-                    >info@lunacorpdata.co.ke</a
-                  >
-                </li>
-              </ul>
-              <!-- End Top Contact -->
-            </div>
+            <!-- End Contact -->
+          </div>
+          <div class="col-lg-6 col-md-7 col-12">
+            <!-- Top Contact -->
+            <ul class="top-contact">
+              <li><i class="fa fa-phone"></i>+254-759-1048-65</li>
+              <li>
+                <i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">info@lunacorpdata.co.ke</a>
+              </li>
+            </ul>
+            <!-- End Top Contact -->
           </div>
         </div>
       </div>
-      <!-- End Topbar -->
-      <!-- Header Inner -->
-      <div class="header-inner">
-        <div class="container">
-          <div class="inner">
-            <div class="row">
-              <div class="col-lg-3 col-md-3 col-12">
-                <!-- Start Logo -->
-                <div class="logo">
-                  <a href="index.php"><img class="logo-img" src="img/logo.png" alt="#" /></a>
-                </div>
-                <!-- End Logo -->
-                <!-- Mobile Nav -->
-                <div class="mobile-nav"></div>
-                <!-- End Mobile Nav -->
+    </div>
+    <!-- End Topbar -->
+    <!-- Header Inner -->
+    <div class="header-inner">
+      <div class="container">
+        <div class="inner">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-12">
+              <!-- Start Logo -->
+              <div class="logo">
+                <a href="index.php"><img class="logo-img" src="img/logo.png" alt="#" /></a>
               </div>
-              <div class="col-lg-7 col-md-9 col-12">
-                <!-- Main Menu -->
-                <div class="main-menu">
-                  <nav class="navigation">
-                    <ul class="nav menu">
-                      <li class="active">
-                        <a href="#"
-                          >Home <i class="icofont-rounded-down"></i
-                        ></a>
-                        <ul class="dropdown">
-                          <li><a href="index.php">Home</a></li>
-                          <li><a href="/about.php">About Us</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="/resources.php">Resources </a></li>
-                      <li><a href="/courses.php">Courses</a></li>
-                      <li>
-                        <a href="#"
-                          >Blogs <i class="icofont-rounded-down"></i
-                        ></a>
-                        <ul class="dropdown">
-                          <li><a href="blog-single.php">Blog Details</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="contact.php">Contact Us</a></li>
-                      <?php if ($is_admin): ?>
-    <li><a href="admin.php">Admin</a></li>
-<?php endif; ?>
-                    </ul>
-                  </nav>
-                </div>
-                <!--/ End Main Menu -->
+              <!-- End Logo -->
+              <!-- Mobile Nav -->
+              <div class="mobile-nav"></div>
+              <!-- End Mobile Nav -->
+            </div>
+            <div class="col-lg-7 col-md-9 col-12">
+              <!-- Main Menu -->
+              <div class="main-menu">
+                <nav class="navigation">
+                  <ul class="nav menu">
+                    <li class="active">
+                      <a href="#">Home <i class="icofont-rounded-down"></i></a>
+                      <ul class="dropdown">
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="/about.php">About Us</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="/resources.php">Resources </a></li>
+                    <li><a href="/courses.php">Courses</a></li>
+                    <li>
+                      <a href="#">Blogs <i class="icofont-rounded-down"></i></a>
+                      <ul class="dropdown">
+                        <li><a href="blog-single.php">Blog Details</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="contact.php">Contact Us</a></li>
+                    <?php if ($is_admin) : ?>
+                      <li><a href="admin.php">Admin</a></li>
+                    <?php endif; ?>
+                  </ul>
+                </nav>
               </div>
-              <div class="col-lg-2 col-12">
-                <div class="get-quote">
-                  <a href="courses.php" class="btn">Enroll with us</a>
-                </div>
+              <!--/ End Main Menu -->
+            </div>
+            <div class="col-lg-2 col-12">
+              <div class="get-quote">
+                <a href="courses.php" class="btn">Enroll with us</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!--/ End Header Inner -->
-    </header>
+    </div>
+    <!--/ End Header Inner -->
+  </header>
   <!-- End Header Area -->
 
   <!-- Breadcrumbs -->
@@ -234,12 +227,12 @@ if ($user_type !== 'administrator') {
 
   <!-- Start Portfolio Details Area -->
   <?php
-include './db_conn.php';
+  include './db_conn.php';
 
-$sql = "SELECT Email_Address, Phone_No, Course_Name, Course_id, confirmed FROM enrollments";
-$result = $mysqli->query($sql);
+  $sql = "SELECT Email_Address, Phone_No, Course_Name, Course_id, confirmed FROM enrollments";
+  $result = $mysqli->query($sql);
 
-if ($result->num_rows > 0) {
+  if ($result->num_rows > 0) {
     echo '<section class="pf-details p-details section">
             <div class="container d-flex align-items-center justify-content-center">
               <table class="table table-bordered">
@@ -253,45 +246,65 @@ if ($result->num_rows > 0) {
                   </tr>
                 </thead>
                 <tbody>';
-    
+
     while ($row = $result->fetch_assoc()) {
-        $email = htmlspecialchars($row['Email_Address']);
-        $phone = htmlspecialchars($row['Phone_No']);
-        $course_name = htmlspecialchars($row['Course_Name']);
-        $course_id = htmlspecialchars($row['Course_id']);
-        $confirmed = $row['confirmed'];
-        
-        echo "<tr>
+      $email = htmlspecialchars($row['Email_Address']);
+      $phone = htmlspecialchars($row['Phone_No']);
+      $course_name = htmlspecialchars($row['Course_Name']);
+      $course_id = htmlspecialchars($row['Course_id']);
+      $confirmed = $row['confirmed'];
+
+      echo "<tr>
                 <td>{$email}</td>
                 <td>{$phone}</td>
                 <td>{$course_name}</td>
                 <td>{$course_id}</td>
                 <td>";
-                
-        if ($confirmed == 1) {
-            echo "<form method='post' action='confirm_enrollment.php'>
+
+      if ($confirmed == 1) {
+        echo "<form method='post' action='confirm_enrollment.php'>
                     <input type='hidden' name='email' value='{$email}'>
                     <input type='hidden' name='course_id' value='{$course_id}'>
                     <button type='submit' class='btn btn-primary'>Confirm</button>
                   </form>";
-        } else {
-            echo "Confirmed";
-        }
-                
-        echo "</td>
+      } else {
+        echo "Confirmed";
+      }
+
+      echo "</td>
               </tr>";
     }
-    
+
     echo '    </tbody>
             </table>
           </div>
         </section>';
-} else {
+  } else {
     echo "No enrolled students yet!";
-}
+  }
 
-$mysqli->close();
-?>
+  $mysqli->close();
+  ?>
+  <!-- Start Email Sending Area -->
+  <section class="email-send section">
+    <div class="container d-flex align-items-center justify-content-center flex-column">
+      <h2>Send Email to All Students</h2>
+      <form class="form w-100 col-md-12 col-lg-12 col-sm-12 " id="emailForm" action="broadcast.php" method="post">
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" class="form-control" placeholder="Enter email subject" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" class="form-control" rows="6" placeholder="Enter your message here" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Email</button>
+      </form>
+      <div id="responseMessage" class="mt-3"></div>
+    </div>
+  </section>
+
+  <!-- End Email Sending Area -->
 
   <!-- End Portfolio Details Area -->
 
@@ -432,6 +445,36 @@ $mysqli->close();
     <!--/ End Copyright -->
   </footer>
   <!--/ End Footer Area -->
+  <script>
+    document.getElementById('emailForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      var formData = new FormData(this);
+
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', 'broadcast.php', true);
+
+      xhr.onload = function() {
+        var responseDiv = document.getElementById('responseMessage');
+        if (xhr.status >= 200 && xhr.status < 300) {
+          var response = JSON.parse(xhr.responseText);
+          if (response.success) {
+            responseDiv.innerHTML = `<div class="alert alert-success" role="alert">${response.message}</div>`;
+          } else {
+            responseDiv.innerHTML = `<div class="alert alert-danger" role="alert">${response.message}</div>`;
+          }
+        } else {
+          responseDiv.innerHTML = `<div class="alert alert-danger" role="alert">An error occurred while sending the email.</div>`;
+        }
+      };
+
+      xhr.onerror = function() {
+        document.getElementById('responseMessage').innerHTML = `<div class="alert alert-danger" role="alert">Request failed.</div>`;
+      };
+
+      xhr.send(formData);
+    });
+  </script>
 
   <!-- jquery Min JS -->
   <script src="js/jquery.min.js"></script>
