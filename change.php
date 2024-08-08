@@ -6,7 +6,6 @@ require './PHPMailer/src/Exception.php';
 require './PHPMailer/src/PHPMailer.php';
 require './PHPMailer/src/SMTP.php';
 
-
 function validate_password($password) {
     return preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,}$/', $password);
 }
@@ -60,13 +59,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     try {
                         $mail->SMTPDebug = 0;
                         $mail->isSMTP();
-                        $mail->Host = 'smtp.gmail.com';
-                        $mail->Port = 587;
+                        $mail->Host = $_ENV['SMTP_HOST'];
+                        $mail->Port = $_ENV['SMTP_PORT'];
                         $mail->SMTPAuth = true;
-                        $mail->Username = 'gilbertketer759@gmail.com'; 
-                        $mail->Password = 'yrviddfylrzsnkim'; 
+                        $mail->Username = $_ENV['SMTP_USERNAME'];
+                        $mail->Password = $_ENV['SMTP_PASSWORD'];
                         $mail->SMTPSecure = 'tls';
-                        $mail->setFrom('gilbertketer759@gmail.com', 'Lunacorp Data Team');
+                        $mail->setFrom($_ENV['SMTP_FROM_EMAIL'], $_ENV['SMTP_FROM_NAME']);
                         $mail->addAddress($email);
                         $mail->isHTML(true);
                         $mail->Subject = $subject;
@@ -96,3 +95,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 
 $mysqli->close();
+?>

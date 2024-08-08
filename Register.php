@@ -39,7 +39,7 @@ $verified = 0;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_CheckQuery = "SELECT * FROM lunacorp_students WHERE Email_Address = ?";
     $phone_CheckQuery = "SELECT * FROM lunacorp_students WHERE Phone_No = ?";
-    
+
     $stmt1 = $mysqli->prepare($email_CheckQuery);
     $stmt1->bind_param("s", $EMAIL_ADDRESS);
     $stmt1->execute();
@@ -86,13 +86,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 try {
                     $mail->SMTPDebug = 0;
                     $mail->isSMTP();
-                    $mail->Host = 'smtp.gmail.com';
-                    $mail->Port = 587;
+                    $mail->Host = $_ENV['SMTP_HOST'];
+                    $mail->Port = $_ENV['SMTP_PORT'];
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'gilbertketer759@gmail.com'; 
-                    $mail->Password = 'yrviddfylrzsnkim'; 
+                    $mail->Username = $_ENV['SMTP_USERNAME'];
+                    $mail->Password = $_ENV['SMTP_PASSWORD'];
                     $mail->SMTPSecure = 'tls';
-                    $mail->setFrom('gilbertketer759@gmail.com', 'Lunacorp Data Team');
+                    $mail->setFrom($_ENV['SMTP_FROM_EMAIL'], $_ENV['SMTP_FROM_NAME']);
                     $mail->addAddress($EMAIL_ADDRESS);
                     $mail->isHTML(true);
                     $mail->Subject = $subject;

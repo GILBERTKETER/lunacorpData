@@ -1,10 +1,15 @@
 <?php
-require './db_conn.php'; // Include your database connection
+session_start();
+
+require_once './vendor/autoload.php'; 
+use Dotenv\Dotenv;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-require './PHPMailer/src/Exception.php';
-require './PHPMailer/src/PHPMailer.php';
-require './PHPMailer/src/SMTP.php';
+
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+require './db_conn.php'; 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Get and sanitize the form data
@@ -13,8 +18,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Generate a unique token
         $token = bin2hex(random_bytes(32));
-        $expiry = date('Y-m-d H:i:s', strtotime('+1 day')); 
-        
+        $expiry = date('Y-m-d H:i:s', strtotime('+1 day'));
+
         // Store the token and expiry in the database
         $stmt = $mysqli->prepare("UPDATE lunacorp_students SET reset_token = ?, token_expiry = ? WHERE Email_Address = ?");
         $stmt->bind_param("sss", $token, $expiry, $email);
@@ -32,10 +37,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $mail->Host = 'smtp.gmail.com';
                 $mail->Port = 587;
                 $mail->SMTPAuth = true;
-                $mail->Username = 'gilbertketer759@gmail.com'; 
-                $mail->Password = 'yrviddfylrzsnkim'; 
+                $mail->Username = $_ENV['EMAIL_USERNAME']; 
+                $mail->Password = $_ENV['EMAIL_PASSWORD']; 
                 $mail->SMTPSecure = 'tls';
-                $mail->setFrom('gilbertketer759@gmail.com', 'Lunacorp Data Team');
+                $mail->setFrom($_ENV['EMAIL_USERNAME'], 'Lunacorp Data Team');
                 $mail->addAddress($email);
                 $mail->isHTML(true);
                 $mail->Subject = $subject;
@@ -48,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         } else {
             echo json_encode(['success' => false, 'error' => 'Error updating database.']);
         }
-        
+
         $stmt->close();
     } else {
         echo json_encode(['success' => false, 'error' => 'Invalid email address.']);
@@ -58,3 +63,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 
 $mysqli->close();
+?>

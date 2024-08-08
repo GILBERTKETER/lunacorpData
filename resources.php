@@ -1,17 +1,30 @@
 <?php
 session_start();
 
+require_once './vendor/autoload.php';
+
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 // Database connection
-$host = "localhost";
-$dbname = "lunacorpdata";
-$username = "root";
-$password = "";
-$conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+$host = $_ENV['DB_HOST'];
+$dbname = $_ENV['DB_NAME'];
+$username = $_ENV['DB_USERNAME'];
+$password = $_ENV['DB_PASSWORD'];
+
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Database connection failed: " . $e->getMessage());
+}
 
 // Check if the user is logged in
 if (!isset($_SESSION['LOGGED_IN_EMAIL'])) {
-  header("Location: signin.php");
-  exit();
+    header("Location: signin.php");
+    exit();
 }
 
 // Get the logged-in user's email
@@ -26,11 +39,13 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
 $hasAccess = false;
 $error_message = "You must be enrolled and confirmed to access this content.";
 
-if ($result && $result['confirmed'] == 0) {
-  $hasAccess = true;
+if ($result && $result['confirmed'] == 1) { // Adjust condition to match desired access check
+    $hasAccess = true;
+} else {
+    echo $error_message;
 }
-
 ?>
+
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 
