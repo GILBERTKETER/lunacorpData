@@ -2,19 +2,16 @@
 require './db_conn.php';
 session_start();
 
-// Sanitize and validate inputs
 $course_id = isset($_POST['course_id']) ? intval($_POST['course_id']) : 0;
 $course_name = isset($_POST['course_name']) ? trim($_POST['course_name']) : '';
 $email_address = isset($_POST['email_address']) ? trim($_POST['email_address']) : '';
 $phone_number = isset($_POST['phone_number']) ? trim($_POST['phone_number']) : '';
 
-// Example: Validate course ID and user details
 if ($course_id <= 0 || empty($email_address) || empty($phone_number)) {
     echo json_encode(['success' => false, 'error' => 'Invalid input.']);
     exit;
 }
 
-//check if already enrolled
 $enrolled = "SELECT * FROM enrollments WHERE Course_id = ?";
 $enroll_stmt = $mysqli->prepare($enrolled);
 $enroll_stmt->bind_param("s", $course_id);
@@ -24,7 +21,6 @@ if ($enrolled_results->num_rows > 0) {
     echo json_encode(['success' => false, 'error' => 'Sorry! You are already enrolled!']);
 } else {
 
-    // Insert enrollment record into the database
     $sql = "INSERT INTO enrollments (Email_Address, Phone_No, Course_id, Course_Name) VALUES (?, ?, ?, ?)";
     $stmt = $mysqli->prepare($sql);
     $stmt->bind_param("ssis", $email_address, $phone_number, $course_id, $course_name);

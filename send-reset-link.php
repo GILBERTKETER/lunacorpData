@@ -12,19 +12,15 @@ $dotenv->load();
 require './db_conn.php'; 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Get and sanitize the form data
     $email = filter_input(INPUT_POST, 'email_address', FILTER_SANITIZE_EMAIL);
 
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        // Generate a unique token
         $token = bin2hex(random_bytes(32));
         $expiry = date('Y-m-d H:i:s', strtotime('+1 day'));
 
-        // Store the token and expiry in the database
         $stmt = $mysqli->prepare("UPDATE lunacorp_students SET reset_token = ?, token_expiry = ? WHERE Email_Address = ?");
         $stmt->bind_param("sss", $token, $expiry, $email);
         if ($stmt->execute()) {
-            // Prepare the reset link
             $link = "http://localhost:3000/changepassword.php?token=" . urlencode($token);
 
             $subject = "Password Reset Request";

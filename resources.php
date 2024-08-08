@@ -8,7 +8,6 @@ use Dotenv\Dotenv;
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-// Database connection
 $host = $_ENV['DB_HOST'];
 $dbname = $_ENV['DB_NAME'];
 $username = $_ENV['DB_USERNAME'];
@@ -21,16 +20,13 @@ try {
     die("Database connection failed: " . $e->getMessage());
 }
 
-// Check if the user is logged in
 if (!isset($_SESSION['LOGGED_IN_EMAIL'])) {
     header("Location: signin.php");
     exit();
 }
 
-// Get the logged-in user's email
 $email = $_SESSION['LOGGED_IN_EMAIL'];
 
-// Query to check enrollment status
 $stmt = $conn->prepare("SELECT confirmed FROM enrollments WHERE Email_Address = :email");
 $stmt->bindParam(':email', $email);
 $stmt->execute();
@@ -39,7 +35,7 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
 $hasAccess = false;
 $error_message = "You must be enrolled and confirmed to access this content.";
 
-if ($result && $result['confirmed'] == 1) { // Adjust condition to match desired access check
+if ($result && $result['confirmed'] == 1) { 
     $hasAccess = true;
 } else {
     echo $error_message;
