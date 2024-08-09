@@ -11,7 +11,7 @@ $USERNAME = $_ENV['DB_USERNAME'];
 $PASSWORD = $_ENV['DB_PASSWORD'];
 $DATABASE = $_ENV['DB_DATABASE'];
 
-$mysqli = new mysqli($HOST, $USERNAME, $PASSWORD, $DATABASE, $PORT);
+$mysqli = new mysqli($HOST, $USERNAME, $PASSWORD, $DATABASE);
 
 if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);

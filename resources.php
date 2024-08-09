@@ -6,7 +6,7 @@ if (!isset($_SESSION['LOGGED_IN_EMAIL'])) {
     header("Location: signin.php");
     exit();
 }
-
+$error_message = '';
 $email = $_SESSION['LOGGED_IN_EMAIL'];
 
 $sql = "SELECT confirmed FROM enrollments WHERE Email_Address = ?";
@@ -23,11 +23,7 @@ if ($result && $result['confirmed'] == 1) {
     echo $error_message;
 }
 
-?>
 
-<?php
-session_start();
-include './db_conn.php'; 
 if (!isset($_SESSION['LOGGED_IN_EMAIL'])) {
     header('Location: signin.php');
     exit();

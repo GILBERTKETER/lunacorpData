@@ -33,5 +33,4 @@ if ($enrolled_results->num_rows > 0) {
 }
 
 
-$stmt->close();
 $mysqli->close();
