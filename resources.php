@@ -9,15 +9,15 @@ if (!isset($_SESSION['LOGGED_IN_EMAIL'])) {
 $error_message = '';
 $email = $_SESSION['LOGGED_IN_EMAIL'];
 
-$sql = "SELECT confirmed FROM enrollments WHERE Email_Address = ?";
-$stmt = $mysqli->prepare($sql); 
-$stmt->bind_param('s', $email);
-$stmt->execute();
+$sqll = "SELECT confirmed FROM enrollments WHERE Email_Address = ?";
+$stmt1 = $mysqli->prepare($sqll); 
+$stmt1->bind_param('s', $email);
+$stmt1->execute();
 
-$result = $stmt->get_result()->fetch_assoc(); 
+$result = $stmt1->get_result()->fetch_assoc(); 
 $hasAccess = false;
 
-if ($result && $result['confirmed'] == 1) {
+if ($result && $result['confirmed'] == 0) {
     $hasAccess = true;
 } else {
     echo $error_message;
@@ -29,7 +29,6 @@ if (!isset($_SESSION['LOGGED_IN_EMAIL'])) {
     exit();
 }
 
-$email = $_SESSION['LOGGED_IN_EMAIL'];
 
 $sql = "SELECT user_type FROM lunacorp_students WHERE Email_Address = ?";
 $stmt = $mysqli->prepare($sql);

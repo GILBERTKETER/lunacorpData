@@ -470,22 +470,27 @@ $is_admin = ($user_type === 'administrator');
 
           xhr.onload = function() {
             const response = JSON.parse(xhr.responseText);
-            if (xhr.status == 200) {
-              feedbackElement.textContent = response.message;
+            console.log(response);
+            if (response.success) {
+              feedbackElement.textContent = response.message || 'You were enrolled successfully!';
               feedbackElement.className = 'alert alert-success';
-            } else if (xhr.status > 200 && xhr.status < 300) {
-              feedbackElement.textContent = response.error;
+            } else if(response.success == false){
+              feedbackElement.textContent = response.error || 'Sorry, an unknown error occured!';
               feedbackElement.className = 'alert alert-danger';
-            } else if (xhr.status == 500) {
-
-              feedbackElement.textContent = response.error;
+            }else if (xhr.status >= 400 && xhr.status < 500) {
+              feedbackElement.textContent = response.error || 'Client-side error occurred.';
+              feedbackElement.className = 'alert alert-danger';
+            } else if (xhr.status >= 500 && xhr.status < 600) {
+              feedbackElement.textContent = response.error || 'Server-side error occurred.';
               feedbackElement.className = 'alert alert-danger';
             } else {
-              feedbackElement.textContent = response.error;
+              feedbackElement.textContent = response.error || 'Unexpected error occurred.';
               feedbackElement.className = 'alert alert-danger';
             }
+
             feedbackElement.style.display = 'block';
           };
+
 
           xhr.onerror = function() {
             feedbackElement.textContent = 'An error occurred. Please check your network connection.';
