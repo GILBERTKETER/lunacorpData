@@ -407,7 +407,7 @@
               feedbackElement.textContent = response.error;
               feedbackElement.className = 'alert alert-danger';
             } else if (response.success) {
-              feedbackElement.textContent = response.message;
+              feedbackElement.innerHTML = `${response.message} <a href="/" class="btn btn-primary">Go Home</a>`;
               feedbackElement.className = 'alert alert-success';
               form.reset(); // Reset the form fields on success
             } else {
