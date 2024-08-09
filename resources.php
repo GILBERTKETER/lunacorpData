@@ -1,24 +1,6 @@
 <?php
 session_start();
-
-require_once './vendor/autoload.php';
-
-use Dotenv\Dotenv;
-
-$dotenv = Dotenv::createImmutable(__DIR__);
-$dotenv->load();
-
-$host = $_ENV['DB_HOST'];
-$dbname = $_ENV['DB_NAME'];
-$username = $_ENV['DB_USERNAME'];
-$password = $_ENV['DB_PASSWORD'];
-
-try {
-    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
-}
+require './db_conn.php';
 
 if (!isset($_SESSION['LOGGED_IN_EMAIL'])) {
     header("Location: signin.php");
@@ -27,19 +9,42 @@ if (!isset($_SESSION['LOGGED_IN_EMAIL'])) {
 
 $email = $_SESSION['LOGGED_IN_EMAIL'];
 
-$stmt = $conn->prepare("SELECT confirmed FROM enrollments WHERE Email_Address = :email");
-$stmt->bindParam(':email', $email);
+$sql = "SELECT confirmed FROM enrollments WHERE Email_Address = ?";
+$stmt = $mysqli->prepare($sql); 
+$stmt->bind_param('s', $email);
 $stmt->execute();
-$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
+$result = $stmt->get_result()->fetch_assoc(); 
 $hasAccess = false;
-$error_message = "You must be enrolled and confirmed to access this content.";
 
-if ($result && $result['confirmed'] == 1) { 
+if ($result && $result['confirmed'] == 1) {
     $hasAccess = true;
 } else {
     echo $error_message;
 }
+
+?>
+
+<?php
+session_start();
+include './db_conn.php'; 
+if (!isset($_SESSION['LOGGED_IN_EMAIL'])) {
+    header('Location: signin.php');
+    exit();
+}
+
+$email = $_SESSION['LOGGED_IN_EMAIL'];
+
+$sql = "SELECT user_type FROM lunacorp_students WHERE Email_Address = ?";
+$stmt = $mysqli->prepare($sql);
+$stmt->bind_param("s", $email);
+$stmt->execute();
+$stmt->bind_result($user_type);
+$stmt->fetch();
+$stmt->close();
+$mysqli->close();
+
+$is_admin = ($user_type === 'administrator');
 ?>
 
 <!DOCTYPE html>

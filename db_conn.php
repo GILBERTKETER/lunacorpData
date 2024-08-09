@@ -6,11 +6,12 @@ $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 $HOST = $_ENV['DB_HOST'];
+$PORT = $_ENV['DB_PORT'];
 $USERNAME = $_ENV['DB_USERNAME'];
 $PASSWORD = $_ENV['DB_PASSWORD'];
 $DATABASE = $_ENV['DB_DATABASE'];
 
-$mysqli = new mysqli($HOST, $USERNAME, $PASSWORD, $DATABASE);
+$mysqli = new mysqli($HOST, $USERNAME, $PASSWORD, $DATABASE, $PORT);
 
 if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);

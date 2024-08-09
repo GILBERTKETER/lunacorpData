@@ -1,5 +1,23 @@
 <?php
 session_start();
+include './db_conn.php'; 
+if (!isset($_SESSION['LOGGED_IN_EMAIL'])) {
+    header('Location: signin.php');
+    exit();
+}
+
+$email = $_SESSION['LOGGED_IN_EMAIL'];
+
+$sql = "SELECT user_type FROM lunacorp_students WHERE Email_Address = ?";
+$stmt = $mysqli->prepare($sql);
+$stmt->bind_param("s", $email);
+$stmt->execute();
+$stmt->bind_result($user_type);
+$stmt->fetch();
+$stmt->close();
+$mysqli->close();
+
+$is_admin = ($user_type === 'administrator');
 ?>
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
