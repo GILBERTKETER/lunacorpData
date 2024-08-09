@@ -2,8 +2,6 @@
 session_start();
 include './db_conn.php'; 
 
-$email = $_SESSION['LOGGED_IN_EMAIL'];
-
 $sql = "SELECT user_type FROM lunacorp_students WHERE Email_Address = ?";
 $stmt = $mysqli->prepare($sql);
 $stmt->bind_param("s", $email);
