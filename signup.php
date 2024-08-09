@@ -1,10 +1,6 @@
 <?php
 session_start();
 include './db_conn.php'; 
-if (!isset($_SESSION['LOGGED_IN_EMAIL'])) {
-    header('Location: signin.php');
-    exit();
-}
 
 $email = $_SESSION['LOGGED_IN_EMAIL'];
 
