@@ -1,9 +1,9 @@
 <?php
 session_start();
-include './db_conn.php'; 
+include './db_conn.php';
 if (!isset($_SESSION['LOGGED_IN_EMAIL'])) {
-    header('Location: signin.php');
-    exit();
+  header('Location: signin.php');
+  exit();
 }
 
 $email = $_SESSION['LOGGED_IN_EMAIL'];
@@ -110,99 +110,92 @@ $is_admin = ($user_type === 'administrator');
 
   <!-- Header Area -->
   <header class="header">
-      <!-- Topbar -->
-      <div class="topbar">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-5 col-12">
-              <!-- Contact -->
-              <ul class="top-link">
-                <li><a href="/about.php">About Us</a></li>
-                <li><a href="/courses.php">Courses</a></li>
-                <li><a href="/resources.php">Resources</a></li>
-                <li><a href="/blog-single.php">Blog</a></li>
-                <li><a href="/contact.php">Contact</a></li>
-                <!-- <li><a href="#">Community</a></li> -->
-              </ul>
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-5 col-12">
+            <!-- Contact -->
+            <ul class="top-link">
+              <li><a href="/about.php">About Us</a></li>
+              <li><a href="/courses.php">Courses</a></li>
+              <li><a href="/resources.php">Resources</a></li>
+              <li><a href="/blog-single.php">Blog</a></li>
+              <li><a href="/contact.php">Contact</a></li>
+              <!-- <li><a href="#">Community</a></li> -->
+            </ul>
 
-              <!-- End Contact -->
-            </div>
-            <div class="col-lg-6 col-md-7 col-12">
-              <!-- Top Contact -->
-              <ul class="top-contact">
-                <li><i class="fa fa-phone"></i>+254-759-1048-65</li>
-                <li>
-                  <i class="fa fa-envelope"></i
-                  ><a href="mailto:support@yourmail.com"
-                    >info@lunacorpdata.co.ke</a
-                  >
-                </li>
-              </ul>
-              <!-- End Top Contact -->
-            </div>
+            <!-- End Contact -->
+          </div>
+          <div class="col-lg-6 col-md-7 col-12">
+            <!-- Top Contact -->
+            <ul class="top-contact">
+              <li><i class="fa fa-phone"></i>+254-759-1048-65</li>
+              <li>
+                <i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">info@lunacorpdata.co.ke</a>
+              </li>
+            </ul>
+            <!-- End Top Contact -->
           </div>
         </div>
       </div>
-      <!-- End Topbar -->
-      <!-- Header Inner -->
-      <div class="header-inner">
-        <div class="container">
-          <div class="inner">
-            <div class="row">
-              <div class="col-lg-3 col-md-3 col-12">
-                <!-- Start Logo -->
-                <div class="logo">
-                  <a href="index.php"><img class="logo-img" src="img/logo.png" alt="#" /></a>
-                </div>
-                <!-- End Logo -->
-                <!-- Mobile Nav -->
-                <div class="mobile-nav"></div>
-                <!-- End Mobile Nav -->
+    </div>
+    <!-- End Topbar -->
+    <!-- Header Inner -->
+    <div class="header-inner">
+      <div class="container">
+        <div class="inner">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-12">
+              <!-- Start Logo -->
+              <div class="logo">
+                <a href="index.php"><img class="logo-img" src="img/logo.png" alt="#" /></a>
               </div>
-              <div class="col-lg-7 col-md-9 col-12">
-                <!-- Main Menu -->
-                <div class="main-menu">
-                  <nav class="navigation">
-                    <ul class="nav menu">
-                      <li class="active">
-                        <a href="#"
-                          >Home <i class="icofont-rounded-down"></i
-                        ></a>
-                        <ul class="dropdown">
-                          <li><a href="index.php">Home</a></li>
-                          <li><a href="/about.php">About Us</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="/resources.php">Resources </a></li>
-                      <li><a href="/courses.php">Courses</a></li>
-                      <li>
-                        <a href="#"
-                          >Blogs <i class="icofont-rounded-down"></i
-                        ></a>
-                        <ul class="dropdown">
-                          <li><a href="blog-single.php">Blog Details</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="contact.php">Contact Us</a></li>
-                      <?php if ($is_admin): ?>
-    <li><a href="admin.php">Admin</a></li>
-<?php endif; ?>
-                    </ul>
-                  </nav>
-                </div>
-                <!--/ End Main Menu -->
+              <!-- End Logo -->
+              <!-- Mobile Nav -->
+              <div class="mobile-nav"></div>
+              <!-- End Mobile Nav -->
+            </div>
+            <div class="col-lg-7 col-md-9 col-12">
+              <!-- Main Menu -->
+              <div class="main-menu">
+                <nav class="navigation">
+                  <ul class="nav menu">
+                    <li class="active">
+                      <a href="#">Home <i class="icofont-rounded-down"></i></a>
+                      <ul class="dropdown">
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="/about.php">About Us</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="/resources.php">Resources </a></li>
+                    <li><a href="/courses.php">Courses</a></li>
+                    <li>
+                      <a href="#">Blogs <i class="icofont-rounded-down"></i></a>
+                      <ul class="dropdown">
+                        <li><a href="blog-single.php">Blog Details</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="contact.php">Contact Us</a></li>
+                    <?php if ($is_admin): ?>
+                      <li><a href="admin.php">Admin</a></li>
+                    <?php endif; ?>
+                  </ul>
+                </nav>
               </div>
-              <div class="col-lg-2 col-12">
-                <div class="get-quote">
-                  <a href="courses.php" class="btn">Enroll with us</a>
-                </div>
+              <!--/ End Main Menu -->
+            </div>
+            <div class="col-lg-2 col-12">
+              <div class="get-quote">
+                <a href="courses.php" class="btn">Enroll with us</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!--/ End Header Inner -->
-    </header>
+    </div>
+    <!--/ End Header Inner -->
+  </header>
   <!-- End Header Area -->
 
   <!-- Breadcrumbs -->
@@ -477,19 +470,20 @@ $is_admin = ($user_type === 'administrator');
 
           xhr.onload = function() {
             const response = JSON.parse(xhr.responseText);
-
-            if (xhr.status > 200 && xhr.status < 300) {
+            if (xhr.status == 200) {
+              feedbackElement.textContent = response.message;
+              feedbackElement.className = 'alert alert-success';
+            } else if (xhr.status > 200 && xhr.status < 300) {
               feedbackElement.textContent = response.error;
               feedbackElement.className = 'alert alert-danger';
-            }else if(xhr.status == 500){
+            } else if (xhr.status == 500) {
 
+              feedbackElement.textContent = response.error;
+              feedbackElement.className = 'alert alert-danger';
+            } else {
               feedbackElement.textContent = response.error;
               feedbackElement.className = 'alert alert-danger';
             }
-            else {
-              feedbackElement.textContent = response.message;
-              feedbackElement.className = 'alert alert-success';
-            } 
             feedbackElement.style.display = 'block';
           };
 

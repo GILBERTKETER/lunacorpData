@@ -185,9 +185,7 @@ if ($user_type !== 'administrator') {
                       </ul>
                     </li>
                     <li><a href="contact.php">Contact Us</a></li>
-                    <?php if ($is_admin) : ?>
-                      <li><a href="admin.php">Admin</a></li>
-                    <?php endif; ?>
+                   
                   </ul>
                 </nav>
               </div>

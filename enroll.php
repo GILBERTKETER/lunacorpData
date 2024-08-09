@@ -12,9 +12,9 @@ if ($course_id <= 0 || empty($email_address) || empty($phone_number)) {
     exit;
 }
 
-$enrolled = "SELECT * FROM enrollments WHERE Course_id = ?";
+$enrolled = "SELECT * FROM enrollments WHERE Course_id = ? AND Email_Address = ?";
 $enroll_stmt = $mysqli->prepare($enrolled);
-$enroll_stmt->bind_param("s", $course_id);
+$enroll_stmt->bind_param("ss", $course_id, $email_address);
 $execute_enrolled = $enroll_stmt->execute();
 $enrolled_results = $enroll_stmt->get_result();
 if ($enrolled_results->num_rows > 0) {
