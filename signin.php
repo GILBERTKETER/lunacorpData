@@ -49,6 +49,9 @@
 </head>
 
 <body>
+<!-- <form action="logout.php" method="post">
+    <button type="submit">Logout</button>
+</form> -->
   <!-- Preloader -->
   <div class="preloader">
     <div class="loader">
