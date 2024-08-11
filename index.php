@@ -1,12 +1,12 @@
 <?php
 session_start();
 include './db_conn.php'; 
-if (!isset($_SESSION['LOGGED_IN_EMAIL'])) {
-    header('Location: signin.php');
+$email = '';
+
+if (isset($_SESSION['LOGGED_IN_EMAIL'])) {
+    $email = $_SESSION['LOGGED_IN_EMAIL'];
     exit();
 }
-
-$email = $_SESSION['LOGGED_IN_EMAIL'];
 
 $sql = "SELECT user_type FROM lunacorp_students WHERE Email_Address = ?";
 $stmt = $mysqli->prepare($sql);
