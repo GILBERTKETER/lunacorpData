@@ -3,18 +3,14 @@
 # Stage 1: Install production dependencies using Composer
 FROM composer:lts as prod-deps
 WORKDIR /app
-RUN --mount=type=bind,source=./composer.json,target=composer.json \
-    --mount=type=bind,source=./composer.lock,target=composer.lock \
-    --mount=type=cache,target=/tmp/cache \
-    composer install --no-dev --no-interaction
+COPY composer.json composer.lock ./
+RUN composer install --no-dev --no-interaction
 
 # Stage 2: Install development dependencies using Composer
 FROM composer:lts as dev-deps
 WORKDIR /app
-RUN --mount=type=bind,source=./composer.json,target=composer.json \
-    --mount=type=bind,source=./composer.lock,target=composer.lock \
-    --mount=type=cache,target=/tmp/cache \
-    composer install --no-interaction
+COPY composer.json composer.lock ./
+RUN composer install --no-interaction
 
 # Stage 3: Base image with PHP 8.2 and Apache
 FROM php:8.2-apache as base
