@@ -555,6 +555,9 @@ INTENSIVE PREP SESSION @ $19
                       <i class="fa fa-caret-right"></i>Flexible learning options
                       to suit your schedule.
                     </li>
+                    <li>
+                      <i class="fa fa-caret-right"></i>Foundations of Machine Learning.
+                    </li>
                   </ul>
                 </div>
                 <div class="col-lg-6">
@@ -574,9 +577,7 @@ INTENSIVE PREP SESSION @ $19
                     <li>
                       <i class="fa fa-caret-right"></i>Generative AI
                     </li>
-                    <li>
-                      <i class="fa fa-caret-right"></i>Foundations of Machine Learning.
-                    </li>
+                  
                   </ul>
                 </div>
               </div>
