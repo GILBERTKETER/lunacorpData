@@ -229,7 +229,7 @@
                     We Provide <span>Data Science</span> Training That You Can
                     <span>Excel In!</span>
                   </h1>
-                  <p>
+                  <p style="color:aliceblue;"> 
                     Discover our comprehensive data science courses designed to
                     help you master SQL, Excel, Tableau, and more. Gain
                     practical skills and insights to advance your career in data
@@ -249,7 +249,7 @@
         <!-- Start Single Slider -->
         <div
           class="single-slider"
-          style="background-image: url('img/slider.jpg')"
+          style="background-image: url('img/slider1.jpg')"
         >
           <div class="container">
             <div class="row">
