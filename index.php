@@ -36,7 +36,7 @@
 
     <!-- Title -->
     <title>
-      LunaCorp Data - Comprehensive Data Science and Analytics Training
+      LunaCorp Data - Comprehensive Data Science Training
       Platform.
     </title>
 
@@ -96,12 +96,15 @@
     <!-- Get Pro Button -->
     <ul class="pro-features">
       <a class="get-pro" href="index.php">Enroll Now</a>
-      <li class="big-title">Advanced Data Science Course Available</li>
+      <li class="big-title">Free: "Data Career Readiness Quiz"</li>
       <li class="title">Course Features</li>
-      <li>In-depth SQL Training</li>
-      <li>Comprehensive Excel Workshops</li>
-      <li>Advanced Tableau Techniques</li>
-      <li>Hands-on Data Analysis Projects</li>
+      <li>Low-ticket: "5-Day</li>
+      <li>Data Fundamentals Challenge- Intensive Data Science Interview Prep" ($40)
+      </li>
+      <li>Core offer: "15-Week Data Scientist Bootcamp" ($1,999)
+      </li>
+      <li>- High-ticket: "1-Year Data Analyst Career Accelerator" ($2,499)
+      </li>
       <li>Interactive Learning Modules</li>
       <div class="button">
         <a href="/courses.php" target="_blank" class="btn"
@@ -283,13 +286,11 @@
               <div class="col-lg-7">
                 <div class="text">
                   <h1>
-                    Master <span>Data Analytics</span> with Our
+                    Earn <span>$100,000+</span> with Our
                     <span>Tailored Courses!</span>
                   </h1>
                   <p>
-                    Join our specialized training programs to become proficient
-                    in data analysis tools like SQL, Excel, and Tableau.
-                    Transform your data skills and advance your career.
+                  Data Mastery Countdown: Your Future Starts Now!
                   </p>
 
                   <div class="button">
@@ -394,13 +395,12 @@
           <div class="col-lg-12">
             <div class="section-title">
               <h2>
-                Unlock Your Data Potential with Our Comprehensive Training
-              </h2>
+              NEW TO DATA WORLD HERE IS THE CHANCE 
+              DATA INDUSTRY WAITS ON NO ONE START YOUR JOURNEY TODAY              </h2>
               <img src="img/data1.png" alt="#" />
               <p>
-                Our expert-led courses provide hands-on experience and in-depth
-                knowledge in data science and analytics. Transform your skills
-                with our specialized programs.
+              HACK YOUR WAY TO DATA SCIENCE INTERVIEW SUCCESS
+INTENSIVE PREP SESSION @ $19
               </p>
             </div>
           </div>
@@ -415,7 +415,7 @@
               <h3>Expert Guidance</h3>
               <p>
                 Receive personalized instruction from industry experts in data
-                science and analytics.
+                science and science.
               </p>
             </div>
             <!-- End Single features -->
@@ -518,7 +518,7 @@
               <img src="img/section-img.png" alt="#" />
               <p>
                 At LunaCorp Data, we provide top-notch data science and
-                analytics education, tailored to help you excel in the
+                science education, tailored to help you excel in the
                 data-driven world. Our courses are designed to meet industry
                 standards and offer hands-on experience with essential tools.
               </p>
@@ -571,6 +571,12 @@
                       <i class="fa fa-caret-right"></i>Supportive community and
                       career guidance.
                     </li>
+                    <li>
+                      <i class="fa fa-caret-right"></i>Generative AI
+                    </li>
+                    <li>
+                      <i class="fa fa-caret-right"></i>Foundations of Machine Learning.
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -614,7 +620,7 @@
               <h2>Ready to Enhance Your Data Skills? Join Us Today!</h2>
               <p>
                 Discover comprehensive courses and hands-on training in data
-                science and analytics. Take the next step in your career with
+                science and science. Take the next step in your career with
                 LunaCorp Data.
               </p>
               <div class="button">
@@ -696,7 +702,7 @@
             <!-- Start Single Service -->
             <div class="single-service">
               <i class="icofont icofont-chart"></i>
-              <h4><a href="/signin.php">Data Analytics</a></h4>
+              <h4><a href="/signin.php">Data science</a></h4>
               <p>
                 Comprehensive analysis to drive business insights and decisions.
               </p>
@@ -716,7 +722,7 @@
             <!-- Start Single Service -->
             <div class="single-service">
               <i class="icofont icofont-analysis"></i>
-              <h4><a href="/signin.php">Predictive Analytics</a></h4>
+              <h4><a href="/signin.php">Predictive science</a></h4>
               <p>
                 Utilize advanced techniques to forecast future trends and
                 behaviors.
@@ -756,7 +762,7 @@
               <!-- Table Head -->
               <div class="table-head">
                 <div class="icon">
-                  <i class="icofont icofont-analytics"></i>
+                  <i class="icofont icofont-science"></i>
                 </div>
                 <h4 class="title">Basic Plan</h4>
                 <div class="price">
@@ -871,7 +877,7 @@
               <img src="img/section-img.png" alt="Blog Section Image" />
               <p>
                 Keep up with our latest articles and insights on data science
-                and analytics.
+                and science.
               </p>
             </div>
           </div>
@@ -934,12 +940,12 @@
                   <div class="date">10 Aug, 2024</div>
                   <h4>
                     <a href="blog-details.php"
-                      >The Role of AI in Data Analytics</a
+                      >The Role of AI in Data science</a
                     >
                   </h4>
                   <p>
                     Explore how artificial intelligence is revolutionizing data
-                    analytics.
+                    science.
                   </p>
                 </div>
               </div>
@@ -1037,7 +1043,7 @@
                       <span class="current">Department</span>
                       <ul class="list">
                         <li data-value="1" class="option selected">
-                          Data Analytics
+                          Data science
                         </li>
                         <li data-value="2" class="option">Python for Data</li>
                         <li data-value="3" class="option">SQL Ninjas</li>

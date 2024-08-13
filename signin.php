@@ -13,7 +13,7 @@
 
   <!-- Title -->
   <title>
-    LunaCorp Data - Comprehensive Data Science and Analytics Training
+    LunaCorp Data - Comprehensive Data Science Training
     Platform.
   </title>
 
@@ -70,20 +70,26 @@
 
   <!-- Get Pro Button -->
   <ul class="pro-features">
-    <a class="get-pro" href="#">Enroll Now</a>
-    <li class="big-title">Advanced Data Science Course Available</li>
-    <li class="title">Course Features</li>
-    <li>In-depth SQL Training</li>
-    <li>Comprehensive Excel Workshops</li>
-    <li>Advanced Tableau Techniques</li>
-    <li>Hands-on Data Analysis Projects</li>
-    <li>Interactive Learning Modules</li>
-    <div class="button">
-      <a href="courses.php" target="_blank" class="btn">Course Preview</a>
-      <a href="enroll.php" target="_blank" class="btn">Enroll Now</a>
-    </div>
-  </ul>
-
+      <a class="get-pro" href="index.php">Enroll Now</a>
+      <li class="big-title">Free: "Data Career Readiness Quiz"</li>
+      <li class="title">Course Features</li>
+      <li>Low-ticket: "5-Day</li>
+      <li>Data Fundamentals Challenge- Intensive Data Science Interview Prep" ($40)
+      </li>
+      <li>Core offer: "15-Week Data Scientist Bootcamp" ($1,999)
+      </li>
+      <li>- High-ticket: "1-Year Data Analyst Career Accelerator" ($2,499)
+      </li>
+      <li>Interactive Learning Modules</li>
+      <div class="button">
+        <a href="/courses.php" target="_blank" class="btn"
+          >Course Preview</a
+        >
+        <a href="/signin.php" target="_blank" class="btn"
+          >Enroll Now</a
+        >
+      </div>
+    </ul>
   <!-- Header Area -->
   <header class="header">
     <!-- Topbar -->

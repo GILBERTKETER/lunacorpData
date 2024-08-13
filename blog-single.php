@@ -35,7 +35,7 @@ $is_admin = ($user_type === 'administrator');
 
     <!-- Title -->
     <title>
-      LunaCorp Data - Comprehensive Data Science and Analytics Training
+      LunaCorp Data - Comprehensive Data Science Training
       Platform.
     </title>
     <!-- Favicon -->
@@ -93,19 +93,22 @@ $is_admin = ($user_type === 'administrator');
 
     <!-- Get Pro Button -->
     <ul class="pro-features">
-      <a class="get-pro" href="#">Enroll Now</a>
-      <li class="big-title">Advanced Data Science Course Available</li>
+      <a class="get-pro" href="index.php">Enroll Now</a>
+      <li class="big-title">Free: "Data Career Readiness Quiz"</li>
       <li class="title">Course Features</li>
-      <li>In-depth SQL Training</li>
-      <li>Comprehensive Excel Workshops</li>
-      <li>Advanced Tableau Techniques</li>
-      <li>Hands-on Data Analysis Projects</li>
+      <li>Low-ticket: "5-Day</li>
+      <li>Data Fundamentals Challenge- Intensive Data Science Interview Prep" ($40)
+      </li>
+      <li>Core offer: "15-Week Data Scientist Bootcamp" ($1,999)
+      </li>
+      <li>- High-ticket: "1-Year Data Analyst Career Accelerator" ($2,499)
+      </li>
       <li>Interactive Learning Modules</li>
       <div class="button">
-        <a href="courses.php" target="_blank" class="btn"
+        <a href="/courses.php" target="_blank" class="btn"
           >Course Preview</a
         >
-        <a href="enroll.php" target="_blank" class="btn"
+        <a href="/signin.php" target="_blank" class="btn"
           >Enroll Now</a
         >
       </div>
@@ -242,7 +245,7 @@ $is_admin = ($user_type === 'administrator');
                   <!-- News Title -->
                   <h1 class="news-title">
                     <a href="news-single.php"
-                      >The Power of Data Analytics in Modern Business.</a
+                      >The Power of Data science in Modern Business.</a
                     >
                   </h1>
                   <!-- Meta -->
@@ -271,7 +274,7 @@ $is_admin = ($user_type === 'administrator');
                   <!-- News Text -->
                   <div class="news-text">
                     <p>
-                      Data analytics has become a cornerstone of modern business
+                      Data science has become a cornerstone of modern business
                       strategy. Companies are leveraging data to gain insights
                       into customer behavior, optimize operations, and drive
                       innovation. By analyzing large datasets, businesses can
@@ -279,10 +282,10 @@ $is_admin = ($user_type === 'administrator');
                       enhance their competitive edge.
                     </p>
                     <p>
-                      The rise of big data and advanced analytics tools has
+                      The rise of big data and advanced science tools has
                       transformed how businesses operate. From identifying new
                       market opportunities to improving customer experiences,
-                      data analytics provides actionable insights that drive
+                      data science provides actionable insights that drive
                       growth and efficiency. Companies that embrace data-driven
                       decision-making are better positioned to succeed in a
                       rapidly evolving marketplace.
@@ -302,32 +305,32 @@ $is_admin = ($user_type === 'administrator');
                       </div>
                     </div>
                     <p>
-                      A key advantage of data analytics is its ability to
+                      A key advantage of data science is its ability to
                       uncover hidden patterns and correlations within data. This
                       can lead to more accurate forecasting, personalized
                       marketing strategies, and improved product development. By
-                      utilizing data analytics, businesses can stay ahead of the
+                      utilizing data science, businesses can stay ahead of the
                       curve and adapt to changing market conditions.
                     </p>
                     <blockquote class="overlay">
                       <p>
-                        "Data analytics is not just a trend; it's a fundamental
+                        "Data science is not just a trend; it's a fundamental
                         shift in how businesses operate. Embracing data-driven
                         strategies can lead to significant improvements in
                         performance and profitability."
                       </p>
                     </blockquote>
                     <p>
-                      As data analytics continues to evolve, it is essential for
+                      As data science continues to evolve, it is essential for
                       businesses to stay informed about emerging trends and
                       technologies. Machine learning, artificial intelligence,
-                      and real-time analytics are shaping the future of
+                      and real-time science are shaping the future of
                       data-driven decision-making. Companies that invest in
                       these innovations will be well-equipped to navigate the
                       complexities of the digital age.
                     </p>
                     <p>
-                      Data analytics empowers businesses to not only understand
+                      Data science empowers businesses to not only understand
                       past performance but also anticipate future trends with
                       remarkable accuracy. By leveraging historical data,
                       companies can build predictive models that forecast sales,
@@ -429,7 +432,7 @@ $is_admin = ($user_type === 'administrator');
                           </div>
                           <p>
                             The examples provided in this article are very
-                            insightful. Data analytics has truly revolutionized
+                            insightful. Data science has truly revolutionized
                             industries by offering actionable insights that were
                             previously inaccessible.
                           </p>
