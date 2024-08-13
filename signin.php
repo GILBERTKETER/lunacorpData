@@ -70,7 +70,7 @@
 
   <!-- Get Pro Button -->
   <ul class="pro-features">
-      <a class="get-pro" href="index.php">Enroll Now</a>
+      <a class="get-pro">Enroll Now</a>
       <li class="big-title">Free: "Data Career Readiness Quiz"</li>
       <li class="title">Course Features</li>
       <li>Low-ticket: "5-Day</li>
