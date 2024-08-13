@@ -1,23 +1,23 @@
 <?php
-session_start();
-include './db_conn.php'; 
-$email = '';
+// session_start();
+// include './db_conn.php'; 
+// $email = '';
 
-if (isset($_SESSION['LOGGED_IN_EMAIL'])) {
-    $email = $_SESSION['LOGGED_IN_EMAIL'];
-    exit();
-}
+// if (isset($_SESSION['LOGGED_IN_EMAIL'])) {
+//     $email = $_SESSION['LOGGED_IN_EMAIL'];
+//     exit();
+// }
 
-$sql = "SELECT user_type FROM lunacorp_students WHERE Email_Address = ?";
-$stmt = $mysqli->prepare($sql);
-$stmt->bind_param("s", $email);
-$stmt->execute();
-$stmt->bind_result($user_type);
-$stmt->fetch();
-$stmt->close();
-$mysqli->close();
+// $sql = "SELECT user_type FROM lunacorp_students WHERE Email_Address = ?";
+// $stmt = $mysqli->prepare($sql);
+// $stmt->bind_param("s", $email);
+// $stmt->execute();
+// $stmt->bind_result($user_type);
+// $stmt->fetch();
+// $stmt->close();
+// $mysqli->close();
 
-$is_admin = ($user_type === 'administrator');
+// $is_admin = ($user_type === 'administrator');
 ?>
 
 <!DOCTYPE html>
@@ -189,9 +189,9 @@ $is_admin = ($user_type === 'administrator');
                         </ul>
                       </li>
                       <li><a href="contact.php">Contact Us</a></li>
-                      <?php if ($is_admin): ?>
+                      <!-- <?php //if ($is_admin): ?>
     <li><a href="admin.php">Admin</a></li>
-<?php endif; ?>
+<?php //endif; ?> -->
                     </ul>
                   </nav>
                 </div>
