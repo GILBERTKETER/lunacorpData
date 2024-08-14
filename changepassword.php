@@ -87,26 +87,22 @@ $is_admin = ($user_type === 'administrator');
 
   <!-- Get Pro Button -->
   <ul class="pro-features">
-      <a class="get-pro" >Enroll Now</a>
-      <li class="big-title">Free: "Data Career Readiness Quiz"</li>
-      <li class="title">Course Features</li>
-      <li>Low-ticket: "5-Day</li>
-      <li>Data Fundamentals Challenge- Intensive Data Science Interview Prep" ($40)
-      </li>
-      <li>Core offer: "15-Week Data Scientist Bootcamp" ($1,999)
-      </li>
-      <li>- High-ticket: "1-Year Data Analyst Career Accelerator" ($2,499)
-      </li>
-      <li>Interactive Learning Modules</li>
-      <div class="button">
-        <a href="/courses.php" target="_blank" class="btn"
-          >Course Preview</a
-        >
-        <a href="/signin.php" target="_blank" class="btn"
-          >Enroll Now</a
-        >
-      </div>
-    </ul>
+    <a class="get-pro">Enroll Now</a>
+    <li class="big-title">Chat with us Directly</li>
+    <li class="title">Get to know more</li>
+    <li>New to the data world? Here is the chance! The data industry waits on no one. Start your journey today.
+    </li>
+    
+    <li>Hack Your Way to Data Science Interview Success
+    Intensive Prep Session @ $19
+    </li>
+    <li>Lets get in touch below.</li>
+    <div class="button">
+      <a href="/courses.php" target="_blank" class="btn">Course Preview</a>
+      <a href="https://wa.me/254708487969" target="_blank" class="btn"><i class="fa fa-whatsapp" aria-hidden="true"></i>
+      </i>Whatsapp</a>
+    </div>
+  </ul>
 
   <!-- Header Area -->
   <header class="header">
@@ -130,7 +126,7 @@ $is_admin = ($user_type === 'administrator');
           <div class="col-lg-6 col-md-7 col-12">
             <!-- Top Contact -->
             <ul class="top-contact">
-              <li><i class="fa fa-phone"></i>+254-759-1048-65</li>
+              <li><i class="fa fa-phone"></i>+254 708 487969</li>
               <li>
                 <i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">info@lunacorpdata.co.ke</a>
               </li>
@@ -187,8 +183,8 @@ $is_admin = ($user_type === 'administrator');
             </div>
             <div class="col-lg-2 col-12">
               <div class="get-quote">
-                <a href="courses.php" class="btn">Enroll with us</a>
-              </div>
+              <a href="https://wa.me/254708487969" target="_blank" class="btn"><i class="fa fa-whatsapp" aria-hidden="true"></i>
+              </i>Enroll with us</a>              </div>
             </div>
           </div>
         </div>

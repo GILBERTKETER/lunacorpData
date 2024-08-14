@@ -66,13 +66,6 @@ $is_admin = ($user_type === 'administrator');
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
-
-
-
-
-  <style>
-
-  </style>
 </head>
 
 <body>
@@ -94,26 +87,22 @@ $is_admin = ($user_type === 'administrator');
 
   <!-- Get Pro Button -->
   <ul class="pro-features">
-      <a class="get-pro">Enroll Now</a>
-      <li class="big-title">Free: "Data Career Readiness Quiz"</li>
-      <li class="title">Course Features</li>
-      <li>Low-ticket: "5-Day</li>
-      <li>Data Fundamentals Challenge- Intensive Data Science Interview Prep" ($40)
-      </li>
-      <li>Core offer: "15-Week Data Scientist Bootcamp" ($1,999)
-      </li>
-      <li>- High-ticket: "1-Year Data Analyst Career Accelerator" ($2,499)
-      </li>
-      <li>Interactive Learning Modules</li>
-      <div class="button">
-        <a href="/courses.php" target="_blank" class="btn"
-          >Course Preview</a
-        >
-        <a href="/signin.php" target="_blank" class="btn"
-          >Enroll Now</a
-        >
-      </div>
-    </ul>
+    <a class="get-pro">Enroll Now</a>
+    <li class="big-title">Chat with us Directly</li>
+    <li class="title">Get to know more</li>
+    <li>New to the data world? Here is the chance! The data industry waits on no one. Start your journey today.
+    </li>
+
+    <li>Hack Your Way to Data Science Interview Success
+      Intensive Prep Session @ $19
+    </li>
+    <li>Lets get in touch below.</li>
+    <div class="button">
+      <a href="/courses.php" target="_blank" class="btn">Course Preview</a>
+      <a href="https://wa.me/254708487969" target="_blank" class="btn"><i class="fa fa-whatsapp" aria-hidden="true"></i>
+        </i>Whatsapp</a>
+    </div>
+  </ul>
 
   <!-- Header Area -->
   <header class="header">
@@ -137,7 +126,7 @@ $is_admin = ($user_type === 'administrator');
           <div class="col-lg-6 col-md-7 col-12">
             <!-- Top Contact -->
             <ul class="top-contact">
-              <li><i class="fa fa-phone"></i>+254-759-1048-65</li>
+              <li><i class="fa fa-phone"></i>+254 708 487969</li>
               <li>
                 <i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">info@lunacorpdata.co.ke</a>
               </li>
@@ -194,7 +183,8 @@ $is_admin = ($user_type === 'administrator');
             </div>
             <div class="col-lg-2 col-12">
               <div class="get-quote">
-                <a href="courses.php" class="btn">Enroll with us</a>
+                <a href="https://wa.me/254708487969" target="_blank" class="btn"><i class="fa fa-whatsapp" aria-hidden="true"></i>
+                  </i>Enroll with us</a>
               </div>
             </div>
           </div>
@@ -231,17 +221,17 @@ $is_admin = ($user_type === 'administrator');
         <!-- Course 1 -->
         <div class="col-md-6 col-lg-6 mb-4">
           <div class="course-container card h-100">
-            <img src="img/dataanlytics.jpg" class="card-img-top image" alt="Course 1">
+            <img src="img/ml (1).png" class="card-img-top image" alt="Course 1">
             <div class="card-body">
-              <h5 class="card-title">Data science Fundamentals</h5>
+              <h5 class="card-title">Excel for Data Science: Advanced Techniques and Business Applications</h5>
               <div class="course-content">
-                <p class="card-text">Learn the basics of data science, including data collection, cleaning, and visualization techniques. This course covers essential tools and methodologies used in the field.</p>
+                <p class="card-text">Master advanced Excel techniques to analyze complex data and make strategic business decisions. Learn powerful formulas, pivot tables, and data visualization tools to enhance your data analysis skills.</p>
               </div>
               <form action="./enroll.php" method="post">
                 <input type="hidden" name="course_id" value="1">
-                <input type="hidden" name="course_name" value="Data science Fundamentals">
+                <input type="hidden" name="course_name" value="Excel for Data Science: Advanced Techniques and Business Applications">
                 <div style="width: 100%;" class="form-group login-btn">
-                  <button type="button" class="btn enroll-btn" data-course-id="1" data-course-name="Data science Fundamentals">Enroll Now</button>
+                  <button type="button" class="btn enroll-btn" data-course-id="1" data-course-name="Excel for Data Science: Advanced Techniques and Business Applications">Enroll Now</button>
                   <div class="feedback" id="feedback-1"></div>
                 </div>
               </form>
@@ -251,17 +241,17 @@ $is_admin = ($user_type === 'administrator');
         <!-- Course 2 -->
         <div class="col-md-6 col-lg-6 mb-4">
           <div class="course-container card h-100">
-            <img src="img/ml.jpg" class="card-img-top" alt="Course 2">
+            <img src="img/ml (6).jpg" class="card-img-top" alt="Course 2">
             <div class="card-body">
-              <h5 class="card-title">Machine Learning for Business</h5>
+              <h5 class="card-title">Data Analytics with SQL: From Data to Decisions</h5>
               <div class="course-content">
-                <p class="card-text">Explore how machine learning can be applied to solve real-world business problems. Learn about predictive modeling, clustering, and classification techniques.</p>
+                <p class="card-text">Dive into SQL to uncover insights from your data. This course covers essential SQL queries and techniques to transform raw data into actionable business decisions, making you proficient in data manipulation and analysis.</p>
               </div>
               <form action="./enroll.php" method="post">
                 <input type="hidden" name="course_id" value="2">
-                <input type="hidden" name="course_name" value="Machine Learning for Business">
+                <input type="hidden" name="course_name" value="Data Analytics with SQL: From Data to Decisions">
                 <div style="bottom:20px; width: 100%;" class="form-group login-btn">
-                  <button type="button" class="btn enroll-btn" data-course-id="2" data-course-name="Machine Learning for Business">Enroll Now</button>
+                  <button type="button" class="btn enroll-btn" data-course-id="2" data-course-name="Data Analytics with SQL: From Data to Decisions">Enroll Now</button>
                   <div class="feedback" id="feedback-2"></div>
                 </div>
               </form>
@@ -271,17 +261,17 @@ $is_admin = ($user_type === 'administrator');
         <!-- Course 3 -->
         <div class="col-md-6 col-lg-6 mb-4">
           <div class="course-container card h-100">
-            <img src="img/bigdata.png" class="card-img-top" alt="Course 3">
+            <img src="img/ml (3).jpg" class="card-img-top" alt="Course 3">
             <div class="card-body">
-              <h5 class="card-title">Big Data Technologies</h5>
+              <h5 class="card-title">ALTERYX</h5>
               <div class="course-content">
-                <p class="card-text">Dive into the world of big data technologies. Learn about Hadoop, Spark, and other tools used for processing and analyzing large-scale datasets.</p>
+                <p class="card-text">Explore Alteryx, a leading data blending and advanced analytics platform. Learn to streamline data workflows, perform complex analytics, and generate actionable insights with this powerful tool.</p>
               </div>
               <form action="./enroll.php" method="post">
                 <input type="hidden" name="course_id" value="3">
-                <input type="hidden" name="course_name" value="Big Data Technologies">
+                <input type="hidden" name="course_name" value="ALTERYX">
                 <div style="bottom:20px; width: 100%;" class="form-group login-btn">
-                  <button type="button" class="btn enroll-btn" data-course-id="3" data-course-name="Big Data Technologies">Enroll Now</button>
+                  <button type="button" class="btn enroll-btn" data-course-id="3" data-course-name="ALTERYX">Enroll Now</button>
                   <div class="feedback" id="feedback-3"></div>
                 </div>
               </form>
@@ -291,18 +281,82 @@ $is_admin = ($user_type === 'administrator');
         <!-- Course 4 -->
         <div class="col-md-6 col-lg-6 mb-4">
           <div class="course-container card h-100">
-            <img src="img/datavisual.jpeg" class="card-img-top" alt="Course 4">
+            <img src="img/ml (2).jpg" class="card-img-top" alt="Course 4">
             <div class="card-body">
-              <h5 class="card-title">Data Visualization and Storytelling</h5>
+              <h5 class="card-title">TABLEAU/POWER BI</h5>
               <div class="course-content">
-                <p class="card-text">Master the art of presenting data insights effectively. Learn how to create compelling visualizations and craft data-driven narratives to influence decision-making.</p>
+                <p class="card-text">Gain expertise in Tableau and Power BI for creating interactive and visually compelling data visualizations. This course covers the essentials of dashboard creation, data integration, and report generation to effectively communicate insights.</p>
               </div>
               <form action="./enroll.php" method="post">
                 <input type="hidden" name="course_id" value="4">
-                <input type="hidden" name="course_name" value="Data Visualization and Storytelling">
+                <input type="hidden" name="course_name" value="TABLEAU/POWER BI">
                 <div style="width: 100%; bottom:20px;" class="form-group login-btn">
-                  <button type="button" class="btn enroll-btn" data-course-id="4" data-course-name="Data Visualization and Storytelling">Enroll Now</button>
+                  <button type="button" class="btn enroll-btn" data-course-id="4" data-course-name="TABLEAU/POWER BI">Enroll Now</button>
                   <div class="feedback" id="feedback-4"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Course 5 -->
+        <div class="col-md-6 col-lg-6 mb-4">
+          <div class="course-container card h-100">
+            <img src="img/ml (1).jpg" class="card-img-top" alt="Course 5">
+            <div class="card-body">
+              <h5 class="card-title">Python Core Principles & Machine Learning</h5>
+              <div class="course-content">
+                <p class="card-text">Develop a solid foundation in Python programming and apply it to machine learning. Learn core Python principles and explore machine learning algorithms to build predictive models and solve real-world problems.</p>
+              </div>
+              <form action="./enroll.php" method="post">
+                <input type="hidden" name="course_id" value="5">
+                <input type="hidden" name="course_name" value="Python Core Principles & Machine Learning">
+                <div style="width: 100%; bottom:20px;" class="form-group login-btn">
+                  <button type="button" class="btn enroll-btn" data-course-id="5" data-course-name="Python Core Principles & Machine Learning">Enroll Now</button>
+                  <div class="feedback" id="feedback-5"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Course 6 -->
+        <div class="col-md-6 col-lg-6 mb-4">
+          <div class="course-container card h-100">
+            <img src="img/ml (4).jpg" class="card-img-top" alt="Course 6">
+            <div class="card-body">
+              <h5 class="card-title">Artificial Intelligence: From Concept to Implementation
+
+              </h5>
+              <div class="course-content">
+                <p class="card-text">Understand the fundamentals of AI and its practical applications. This course covers AI concepts, technologies, and implementation strategies, empowering you to integrate AI solutions into real-world projects.
+                </p>
+              </div>
+              <form action="./enroll.php" method="post">
+                <input type="hidden" name="course_id" value="6">
+                <input type="hidden" name="course_name" value="Artificial Intelligence: From Concept to Implementation">
+                <div style="width: 100%; bottom:20px;" class="form-group login-btn">
+                  <button type="button" class="btn enroll-btn" data-course-id="6" data-course-name="Artificial Intelligence: From Concept to Implementation">Enroll Now</button>
+                  <div class="feedback" id="feedback-6"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Course 7 -->
+        <div class="col-md-6 col-lg-6 mb-4">
+          <div class="course-container card h-100">
+            <img src="img/ml (5).jpg" class="card-img-top" alt="Course 7">
+            <div class="card-body">
+              <h5 class="card-title">A.I. – Enhanced Business Intelligence</h5>
+              <div class="course-content">
+                <p class="card-text">Discover how AI can transform business intelligence by enhancing data analysis, forecasting, and decision-making. Learn to leverage AI technologies to gain deeper insights and drive business growth.
+                </p>
+              </div>
+              <form action="./enroll.php" method="post">
+                <input type="hidden" name="course_id" value="7">
+                <input type="hidden" name="course_name" value="A.I. – Enhanced Business Intelligence">
+                <div style="width: 100%; bottom:20px;" class="form-group login-btn">
+                  <button type="button" class="btn enroll-btn" data-course-id="7" data-course-name="A.I. – Enhanced Business Intelligence">Enroll Now</button>
+                  <div class="feedback" id="feedback-7"></div>
                 </div>
               </form>
             </div>
@@ -481,10 +535,10 @@ $is_admin = ($user_type === 'administrator');
             if (response.success) {
               feedbackElement.textContent = response.message || 'You were enrolled successfully!';
               feedbackElement.className = 'alert alert-success';
-            } else if(response.success == false){
+            } else if (response.success == false) {
               feedbackElement.textContent = response.error || 'Sorry, an unknown error occured!';
               feedbackElement.className = 'alert alert-danger';
-            }else if (xhr.status >= 400 && xhr.status < 500) {
+            } else if (xhr.status >= 400 && xhr.status < 500) {
               feedbackElement.textContent = response.error || 'Client-side error occurred.';
               feedbackElement.className = 'alert alert-danger';
             } else if (xhr.status >= 500 && xhr.status < 600) {
