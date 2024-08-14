@@ -409,9 +409,10 @@
               feedbackElement.textContent = response.error;
               feedbackElement.className = 'alert alert-danger';
             } else if (response.success) {
-              feedbackElement.innerHTML = `${response.message} <a href="/" class="btn btn-primary">Go Home</a>`;
               feedbackElement.className = 'alert alert-success';
-              form.reset(); // Reset the form fields on success
+              feedbackElement.innerHTML = response.message;
+              window.location.href = '/index.php';
+              form.reset(); 
             } else {
               feedbackElement.textContent = 'Unexpected response format.';
               feedbackElement.className = 'alert alert-danger';
