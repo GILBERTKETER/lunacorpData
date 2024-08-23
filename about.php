@@ -9,7 +9,8 @@
     <meta name="description" content="" />
     <meta name="copyright" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1380165038596121"
+     crossorigin="anonymous"></script>
     <!-- Title -->
     <title>
         LunaCorp Data - Comprehensive Data Science Training
