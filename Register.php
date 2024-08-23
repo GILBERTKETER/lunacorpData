@@ -1,28 +1,34 @@
 <?php
 
 require('./db_conn.php');
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+
 require './PHPMailer/src/Exception.php';
 require './PHPMailer/src/PHPMailer.php';
 require './PHPMailer/src/SMTP.php';
 
-function sanitize_input($data) {
+function sanitize_input($data)
+{
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
     return $data;
 }
 
-function validate_password($password) {
+function validate_password($password)
+{
     return preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,}$/', $password);
 }
 
-function generateOTP() {
+function generateOTP()
+{
     return rand(100000, 999999);
 }
 
-function validateKenyanPhoneNumber($number) {
+function validateKenyanPhoneNumber($number)
+{
     $cleanedNumber = preg_replace('/[^0-9]/', '', $number);
     return strlen($cleanedNumber) === 10 && preg_match('/^(07|01)/', $cleanedNumber);
 }
@@ -52,19 +58,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($results1->num_rows > 0) {
         echo json_encode(['success' => false, 'error' => "Email is already registered! Please check your gmail app."]);
-
     } elseif ($results0->num_rows > 0) {
         echo json_encode(['success' => false, 'error' => "Phone number is already taken!"]);
-
     } elseif ($PASSWORD != $CPASSWORD) {
         echo json_encode(['success' => false, 'error' => "Passwords don't match!"]);
-
     } elseif (!validate_password($PASSWORD)) {
         echo json_encode(['success' => false, 'error' => "Password should be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character."]);
-
     } elseif (!validateKenyanPhoneNumber($phoneNumber)) {
         echo json_encode(['success' => false, 'error' => "The site is not available for your country."]);
-
     } else {
         $status = 'Active';
         $hashed_password = password_hash($PASSWORD, PASSWORD_BCRYPT);
@@ -72,16 +73,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 VALUES (?, ?, ?, ?, ?)";
         $stmt3 = $mysqli->prepare($sql);
         $stmt3->bind_param("sssss", $EMAIL_ADDRESS, $Full_Name, $hashed_password, $phoneNumber, $_POST['gender']);
-        
+
         if ($stmt3->execute()) {
             $updateUserQuery = "UPDATE lunacorp_students SET OTPCODE = ?, Verified = ? WHERE Email_Address = ?";
             $updateUserStmt = $mysqli->prepare($updateUserQuery);
             $updateUserStmt->bind_param('iis', $otp, $verified, $EMAIL_ADDRESS);
             $otpset = $updateUserStmt->execute();
-            
+
             if ($otpset) {
                 $subject = "Verification Code";
-                $message = "Please use the code $otp to verify your account and proceed with your learning journey!";
+                $message = "Please use the code $otp to verify your account and proceed with your learning journey!\n\n" .
+                    "Welcome to the data revolution. At LunaCorp Data, we don't just teach skills – we forge data titans.\n\n" .
+                    "Your journey to becoming an indispensable data expert starts now. Time is ticking, and the industry waits for no one.\n\n" .
+                    "Enroll today and secure your place at the forefront of the data-driven future.";
                 $mail = new PHPMailer(true);
                 try {
                     $mail->SMTPDebug = 0;
@@ -114,4 +118,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt0->close();
     $mysqli->close();
 }
-?>

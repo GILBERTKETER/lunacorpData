@@ -30,10 +30,11 @@ $is_admin = ($user_type === 'administrator');
   <meta name="description" content="" />
   <meta name="copyright" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1380165038596121"
+     crossorigin="anonymous"></script>
   <!-- Title -->
   <title>
-    LunaCorp Data - Comprehensive Data Science and Analytics Training
+    LunaCorp Data - Comprehensive Data Science Training
     Platform.
   </title>
 
@@ -87,17 +88,20 @@ $is_admin = ($user_type === 'administrator');
 
   <!-- Get Pro Button -->
   <ul class="pro-features">
-    <a class="get-pro" href="#">Enroll Now</a>
-    <li class="big-title">Advanced Data Science Course Available</li>
-    <li class="title">Course Features</li>
-    <li>In-depth SQL Training</li>
-    <li>Comprehensive Excel Workshops</li>
-    <li>Advanced Tableau Techniques</li>
-    <li>Hands-on Data Analysis Projects</li>
-    <li>Interactive Learning Modules</li>
+    <a class="get-pro">Enroll Now</a>
+    <li class="big-title">Chat with us Directly</li>
+    <li class="title">Get to know more</li>
+    <li>New to the data world? Here is the chance! The data industry waits on no one. Start your journey today.
+    </li>
+    
+    <li>Hack Your Way to Data Science Interview Success
+    Intensive Prep Session @ $19
+    </li>
+    <li>Lets get in touch below.</li>
     <div class="button">
-      <a href="courses.php" target="_blank" class="btn">Course Preview</a>
-      <a href="enroll.php" target="_blank" class="btn">Enroll Now</a>
+      <a href="/courses.php" target="_blank" class="btn">Course Preview</a>
+      <a href="https://wa.me/254708487969" target="_blank" class="btn"><i class="fa fa-whatsapp" aria-hidden="true"></i>
+      </i>Whatsapp</a>
     </div>
   </ul>
 
@@ -123,7 +127,7 @@ $is_admin = ($user_type === 'administrator');
           <div class="col-lg-6 col-md-7 col-12">
             <!-- Top Contact -->
             <ul class="top-contact">
-              <li><i class="fa fa-phone"></i>+254-759-1048-65</li>
+              <li><i class="fa fa-phone"></i>+254 708 487969</li>
               <li>
                 <i class="fa fa-envelope"></i><a href="mailto:support@yourmail.com">info@lunacorpdata.co.ke</a>
               </li>
@@ -180,8 +184,8 @@ $is_admin = ($user_type === 'administrator');
             </div>
             <div class="col-lg-2 col-12">
               <div class="get-quote">
-                <a href="courses.php" class="btn">Enroll with us</a>
-              </div>
+              <a href="https://wa.me/254708487969" target="_blank" class="btn"><i class="fa fa-whatsapp" aria-hidden="true"></i>
+              </i>Enroll with us</a>              </div>
             </div>
           </div>
         </div>
@@ -400,6 +404,18 @@ $is_admin = ($user_type === 'administrator');
     <!--/ End Copyright -->
   </footer>
   <!--/ End Footer Area -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1380165038596121"
+     crossorigin="anonymous"></script>
+<!-- lunacorpdata -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1380165038596121"
+     data-ad-slot="5400503743"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const form = document.querySelector('.form');
